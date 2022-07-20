@@ -1,0 +1,114 @@
+.containerSignUp {
+    width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-image: url('../../assets/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 63px;
+    margin-bottom: 93px;
+}
+
+.registerform {
+    width: 513px;
+    height: 781px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 61px 31px 57px 31px;
+
+    background-color: #FFFFFF;
+}
+
+.registerform h1 {
+    margin-bottom: 33px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    Font-size: 28px;
+    Line-height: 33.18px;
+    color: #7978D9;
+}
+
+.registerInput {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 31px;
+}
+
+.labelRegister {
+    margin-bottom: 8px;
+
+    Font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    Font-size: 18px;
+    Line-height: 21.33px;
+}
+
+.btn-submit {
+    all: unset;
+    box-sizing: border-box;
+
+    width: 449px;
+    height: 53px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 7px;
+
+    Font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    Font-size: 14px;
+    line-height: 16.59px;
+    color: #FFFFFF;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+    background-color: rgba(121, 120, 217, 1);
+}
+
+.btn-submit:hover {
+    background-color: rgb(131, 130, 230);
+}
+
+.btn-back {
+    all: unset;
+
+    margin-top: 8px;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: rgba(123, 97, 255, 1);
+
+    cursor: pointer;
+}
+
+.warn-register {
+    margin-top: 530px;
+
+    position: fixed;
+
+    text-align: justify;
+    Font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    Font-size: 14px;
+    line-height: 16.59px;
+    color: red;
+}

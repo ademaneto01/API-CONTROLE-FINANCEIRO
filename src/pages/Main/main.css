@@ -1,0 +1,718 @@
+.dashMain {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    background: linear-gradient(to right, #05EDE3, #645FFB);
+}
+
+.header {
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 41px 100px 33px 100px;
+}
+
+#nav-users {
+    display: flex;
+    align-items: center;
+}
+
+#nav-users span {
+    margin-right: 16px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    Font-size: 14px;
+    Line-height: 16.59px;
+    color: white;
+}
+
+.userImg {
+    width: 41.82px;
+    height: 41.82px;
+
+    margin-right: 7.09px;
+
+    cursor: pointer;
+}
+
+.logOut {
+    width: 22px;
+    height: 27.5px;
+
+    cursor: pointer;
+}
+
+#nav-users .userImg:hover {
+    transform: scale(1.1);
+}
+
+#nav-users .logOut:hover {
+    transform: scale(1.1);
+}
+
+.dash {
+    width: 100vw;
+    height: 100%;
+
+    position: relative;
+
+    padding: 55px 100px 44px 105px;
+
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+
+    background-color: white;
+}
+
+.textFilter {
+    width: 80px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 8px 14px;
+    margin-bottom: 26px;
+
+    cursor: pointer;
+
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.textFilter strong {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    Font-size: 12px;
+    Line-height: 14.4px;
+    color: #000000;
+}
+
+.textFilter img {
+    width: 14px;
+    height: 14px;
+
+    margin-right: 4px;
+}
+
+.dashFilter {
+    width: 959px;
+
+    padding: 32px 32px 13px 32px;
+    margin-top: 25px;
+    margin-left: 61px;
+    margin-bottom: 61px;
+
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dashFilter h1 {
+    margin-bottom: 20px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    Font-size: 12px;
+    Line-height: 14.22px;
+    color: #B9B9B9;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category {
+    width: 85px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4px 10px;
+    margin-left: 12px;
+    margin-bottom: 9px;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.category span {
+    display: inline-block;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    Font-size: 10px;
+    Line-height: 11.85px;
+    color: #000000;
+}
+
+.btn-filter {
+    margin-top: 17px;
+    margin-left: 10px;
+}
+
+.btn-filter button {
+    all: unset;
+    box-sizing: border-box;
+
+    width: 98px;
+    height: 30px;
+
+    margin-left: 5px;
+
+    padding: 3.67px 8px;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14.4px;
+    color: #000000;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+#btn-filter-aplicar {
+    background-color: #7978D9;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14.4px;
+    color: #FAFAFA;
+}
+
+#btn-filter-aplicar:hover {
+    background-color: rgb(131, 130, 230);
+}
+
+#btn-filter-limpar:hover {
+    background-color: rgb(131, 130, 230);
+    color: #FAFAFA;
+}
+
+.modalUserAll,
+.modalAddTransaction,
+.modalEditTransacao {
+    width: 100vw;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(61, 61, 61, 0.48);
+}
+
+.modalUser,
+.modalTransaction,
+.editTransacao {
+    width: 611px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    padding: 56px 62px 41px 64px;
+
+    border-radius: 20px;
+    background-color: #FFFFFF;
+
+}
+
+.editUserError {
+    position: absolute;
+    bottom: 130px;
+
+    Font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    Font-size: 14px;
+    line-height: 16.59px;
+    color: red;
+}
+
+.editSelect {
+    margin-bottom: 26px;
+}
+
+.selectedCategory {
+    width: 485px;
+    height: 63px;
+
+    padding: 20px;
+    margin-top: 8.77px;
+
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+.selectedCategory option {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    Font-size: 16px;
+    Line-height: 18.96px;
+    color: #484848;
+}
+
+.containerTipo {
+    display: flex;
+
+    margin-bottom: 38px;
+}
+
+.edit-debit,
+.edit-out {
+    width: 245px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    Font-size: 14px;
+    Line-height: 16.59px;
+    color: #FFFFFF;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+}
+
+.textEdit,
+.textAddTransaction {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    Font-size: 36px;
+    Line-height: 42.66px;
+    color: #000000;
+}
+
+.textEdit {
+    margin-bottom: 48px;
+}
+
+.textAddTransaction {
+    margin-bottom: 52px;
+}
+
+.btn-close {
+    width: 26.58px;
+    height: 26.58px;
+
+    position: absolute;
+    right: 64.55px;
+    top: 67px;
+
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    transform: scale(1.1);
+}
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.editInput {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 26px;
+}
+
+.checkTypeTransactyion {
+    display: flex;
+}
+
+.checkTypeTransactyion h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    Font-size: 14px;
+    Line-height: 16.59px;
+    color: #FFFFFF;
+}
+
+.addDebit,
+.addOut {
+    width: 245px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 38px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.labelEdit {
+    margin-bottom: 8.77px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    Font-size: 24px;
+    Line-height: 28.44px;
+    color: #484848;
+}
+
+.form-login__edit {
+    all: unset;
+    box-sizing: border-box;
+
+    width: 485px;
+    height: 63.493px;
+
+    padding: 22px;
+    margin-top: 3px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    Font-size: 18px;
+    Line-height: 21.33px;
+    color: #000000;
+
+    border-radius: 5px;
+    border: 1px solid #555555;
+}
+
+.edit-btn {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 22px;
+}
+
+.btn-edit,
+.btn-add-register,
+.btn-confirm {
+    all: unset;
+    box-sizing: border-box;
+
+    width: 236px;
+    height: 46px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+
+    Font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.59px;
+    color: #FFFFFF;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+    background-color: rgba(121, 120, 217, 1);
+}
+
+.btn-edit:hover {
+    background-color: rgb(131, 130, 230);
+}
+
+.btn-add-register:hover {
+    background-color: rgb(131, 130, 230);
+}
+
+.btn-confirm:hover {
+    background-color: rgb(131, 130, 230);
+}
+
+.interna span {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.transactions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listTransactions {
+    width: 964px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 34px;
+}
+
+.columnName {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px 27.35px;
+
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dateBox {
+    display: flex;
+    width: 102px;
+    cursor: pointer;
+}
+
+.dateColumn {
+    margin-right: 3px;
+}
+
+.weekDayBox {
+    width: 102px;
+    text-align: center;
+}
+
+.descriptionBox {
+    width: 300px;
+    text-align: center;
+}
+
+.categoryBox {
+    width: 200px;
+    text-align: center;
+}
+
+.valueBox {
+    width: 150px;
+    text-align: center;
+}
+
+.columnName h1 {
+    Font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #000000;
+}
+
+.listaInterna {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 27.35px;
+
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.itemDate,
+.itemValue {
+    Font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #000000;
+}
+
+.itemDay,
+.itemDescription,
+.itemCategory {
+    Font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #000000;
+}
+
+.transactionsIcons {
+    display: flex;
+}
+
+.editTransaction {
+    margin-right: 21.5px;
+}
+
+.removetransaction {
+    position: relative;
+}
+
+.containerModalExcluir {
+    right: 470px;
+}
+
+.imgPoligono {}
+
+.modalExcluir {
+    width: 111px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    right: 0px;
+    top: 35px;
+
+    z-index: 1;
+
+    padding: 7px 15px;
+
+    border-radius: 4px;
+    background-color: #E4F2FD;
+}
+
+.poligonoModal {
+    position: absolute;
+    top: 27px;
+    right: 5px
+}
+
+.modalExcluir span {
+    margin-bottom: 4px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 11.85px;
+    color: #000000;
+}
+
+.containerBtnModalExcluir {
+    display: flex;
+}
+
+.btn-yes,
+.btn-no {
+    width: 37px;
+
+    padding: 2px 10px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 10.67px;
+    color: #FFFFFF;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+}
+
+.btn-yes {
+    margin-right: 7px;
+    background-color: #3A9FF1;
+}
+
+.btn-no {
+    background-color: #FF576B;
+}
+
+.viewSumary {
+    position: absolute;
+    right: 100px;
+    top: 111px;
+}
+
+.summary {
+    width: 236px;
+
+    padding: 26px 33px 32px 33px;
+    margin-bottom: 16px;
+
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.summary h1 {
+    margin-bottom: 23px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    Font-size: 18px;
+    Line-height: 21.33px;
+    color: #2F2F2F;
+}
+
+.sumaryDetail {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.summaryValue,
+.balanceValue {
+    text-align: right;
+}
+
+.sumaryDetail h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    Font-size: 13px;
+    Line-height: 15.41px;
+}
+
+.debit,
+.out,
+.balanceTitle {
+    color: #2F2F2F;
+}
+
+.debitValue {
+    color: #645FFB;
+}
+
+.outValue {
+    color: #FA8C10;
+}
+
+.debit,
+.debitValue {
+    margin-bottom: 12px;
+}
+
+.out,
+.outValue {
+    margin-bottom: 19px;
+}
+
+.balance {
+    display: flex;
+    justify-content: space-between;
+}
+
+.balanceTitle,
+.balanceValue {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    Font-size: 14px;
+    Line-height: 16.59px;
+}
